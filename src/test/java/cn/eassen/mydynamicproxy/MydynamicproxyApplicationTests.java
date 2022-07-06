@@ -21,7 +21,13 @@ class MydynamicproxyApplicationTests {
     @Test
     void fun1() {
         System.out.println("调用sayHelloByProxy");
-        demo.sayHelloByProxy();
+        demo.sayHelloByProxy("JDK");
+    }
+
+    @Test
+    void fun2() {
+        System.out.println("调用sayHelloByProxy");
+        demo.sayHelloByProxy("CGLIB");
     }
 
 }

@@ -1,6 +1,5 @@
-package cn.eassen.mydynamicproxy.proxy;
+package cn.eassen.mydynamicproxy.javaasistProxy;
 
-import javassist.compiler.MemberResolver;
 import javassist.util.proxy.MethodHandler;
 
 import java.lang.reflect.Method;
