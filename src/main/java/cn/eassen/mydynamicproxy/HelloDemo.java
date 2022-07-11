@@ -1,13 +1,13 @@
 package cn.eassen.mydynamicproxy;
 
 import cn.eassen.mydynamicproxy.cglibProxy.MyCglibProxyFactory;
+import cn.eassen.mydynamicproxy.javaasistProxy.JavassistProxy;
 import cn.eassen.mydynamicproxy.jdkProxy.MyJdkProxyHandler;
 import cn.eassen.mydynamicproxy.service.StudentService;
 import cn.eassen.mydynamicproxy.service.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
@@ -22,7 +22,7 @@ public class HelloDemo {
     StudentService studentService;
 
 
-    public void sayHelloByProxy(String mode) {
+    public void sayHelloByProxy(String mode) throws Exception {
         switch (mode){
             case "JDK":
                 proxyByJDK();
@@ -64,8 +64,10 @@ public class HelloDemo {
         proxy.getStudents();
     }
 
-    private static void proxyByJAVAASIST(){
-
+    private static void proxyByJAVAASIST() throws Exception {
+        JavassistProxy javassistProxy = new JavassistProxy();
+        StudentService mkproxy = (StudentService) javassistProxy.createProxy(StudentService.class, new StudentServiceImpl());
+        mkproxy.getStudents();
     }
 
     private static void proxyByASM(){

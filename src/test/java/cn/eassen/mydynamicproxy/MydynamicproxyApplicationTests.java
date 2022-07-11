@@ -19,15 +19,21 @@ class MydynamicproxyApplicationTests {
     HelloDemo demo;
 
     @Test
-    void fun1() {
+    void fun1() throws Exception {
         System.out.println("调用sayHelloByProxy");
         demo.sayHelloByProxy("JDK");
     }
 
     @Test
-    void fun2() {
+    void fun2() throws Exception {
         System.out.println("调用sayHelloByProxy");
         demo.sayHelloByProxy("CGLIB");
+    }
+
+    @Test
+    void fun3() throws Exception {
+        System.out.println("调用sayHelloByProxy");
+        demo.sayHelloByProxy("JAVAASIST");
     }
 
 }
