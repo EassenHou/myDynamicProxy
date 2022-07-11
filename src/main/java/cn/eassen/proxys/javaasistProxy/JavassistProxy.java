@@ -1,4 +1,4 @@
-package cn.eassen.mydynamicproxy.javaasistProxy;
+package cn.eassen.proxys.javaasistProxy;
 
 
 import cn.eassen.mydynamicproxy.service.StudentService;
@@ -11,6 +11,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 /**
+ * 动态改变类的结构，或者动态生成类。
  * @Author eassen
  * @Create 2022/7/6 15:57
  */

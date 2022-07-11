@@ -36,4 +36,10 @@ class MydynamicproxyApplicationTests {
         demo.sayHelloByProxy("JAVAASIST");
     }
 
+    @Test
+    void fun4() throws Exception {
+        System.out.println("调用sayHelloByProxy");
+        demo.sayHelloByProxy("ASM");
+    }
+
 }

@@ -1,4 +1,4 @@
-package cn.eassen.mydynamicproxy.javaasistProxy;
+package cn.eassen.proxys.javaasistProxy;
 
 import javassist.util.proxy.MethodHandler;
 

@@ -1,4 +1,4 @@
-package cn.eassen.mydynamicproxy.jdkProxy;
+package cn.eassen.proxys.jdkProxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

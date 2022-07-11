@@ -1,8 +1,9 @@
 package cn.eassen.mydynamicproxy;
 
-import cn.eassen.mydynamicproxy.cglibProxy.MyCglibProxyFactory;
-import cn.eassen.mydynamicproxy.javaasistProxy.JavassistProxy;
-import cn.eassen.mydynamicproxy.jdkProxy.MyJdkProxyHandler;
+import cn.eassen.proxys.asmProxy.HelloAgentDump;
+import cn.eassen.proxys.cglibProxy.MyCglibProxyFactory;
+import cn.eassen.proxys.javaasistProxy.JavassistProxy;
+import cn.eassen.proxys.jdkProxy.MyJdkProxyHandler;
 import cn.eassen.mydynamicproxy.service.StudentService;
 import cn.eassen.mydynamicproxy.service.StudentServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,8 +71,10 @@ public class HelloDemo {
         mkproxy.getStudents();
     }
 
-    private static void proxyByASM(){
-
+    private static void proxyByASM() throws Exception {
+        StudentService studentService = new StudentServiceImpl();
+        StudentService studentService1 = HelloAgentDump.newProxyInstance(studentService);
+        studentService1.getStudents();
     }
 
 }

@@ -1,4 +1,4 @@
-package cn.eassen.mydynamicproxy.cglibProxy;
+package cn.eassen.proxys.cglibProxy;
 
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
@@ -7,6 +7,9 @@ import org.springframework.cglib.proxy.MethodProxy;
 import java.lang.reflect.Method;
 
 /**
+ * 1、CgLib，一个强大的，高性能，高质量的代码生成类库，
+ * 2、它可以在运行期扩展Java类与实现Java接口
+ * 3、（是对ASM的一层封装）。
  * @Author eassen
  * @Create 2022/7/6 17:42
  */
